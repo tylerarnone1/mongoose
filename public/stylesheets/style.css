@@ -1,8 +1,23 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("https://i.imgur.com/hgRMlDk.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 a {
   color: #00B7FF;
+}
+
+tr{
+  padding: 40px;
+}
+nav > img {
+  width: 34px;
+  object-fit: contain;
+  margin-right: auto;
+}
+a{
+  text-align: right;
 }

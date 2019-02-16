@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+
+          <h1>Mongoose flights</h1>
+    <h2>flights List</h2>
+
+     
+        <tr>
+            <th>Flightnumber</th>
+            <th>Destination</th>
+            <th>Airline</th>
+            <th>ontime</th>
+        </tr>
+   
+    <tbody>
+        <% flights.forEach(function(m) { %>
+            <tr>
+                <td><%= m.Flightnumb %></td>
+                <td><%= m.Destination %></td>
+                <td><%= m.Airline%></td>
+                <td><%= m.onTime ? 'Yes' : 'Nope' %></td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+
+
+
+  <%- include('../partials/footer') %>
