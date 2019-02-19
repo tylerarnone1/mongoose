@@ -6,9 +6,7 @@ body {
   background-size: cover;
 }
 
-a {
-  color: #00B7FF;
-}
+
 
 tr{
   padding: 40px;
@@ -17,7 +15,13 @@ nav > img {
   width: 34px;
   object-fit: contain;
   margin-right: auto;
+  
 }
-a{
-  text-align: right;
+nav{
+  text-align: center;
+  width: auto;
+  padding: 10px;
+  text-decoration: none;
+  background-color: rgba(0,0,0,0.2);
+  
 }
