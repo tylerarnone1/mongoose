@@ -1,8 +1,8 @@
 <%- include('../partials/header') %>
-    <h2>Enter a New Airplane</h2>
-    <form action="/airplanes" method="POST">
+    <h2>Enter  New flights</h2>
+    <form action="/flights" method="POST">
         <label>Flight-Numbers:
-          <input type="text" name="Flight-Numbers">
+          <input type="text" name="Flightnumb">
         </label><br>
         <label>Destination:
           <input type="text" name="Destination">
@@ -12,7 +12,7 @@
           <input type="text" name="Airline">
         </label><br>
         <label>On-time:
-          <input type="checkbox" name="ontime" checked>
+          <input type="checkbox" name="onTime" checked>
         </label><br>
         <input type="submit" value="Add Airplane">
     </form>

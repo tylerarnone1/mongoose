@@ -16,12 +16,7 @@ function index(req, res){
     });
 }
 function create(req, res){
-    req.body.onTime = !!req.body.onTime;
-   
- if (req.body.cast) req.body.cast = req.body.cast.split(',');
-   for (let key in req.body){
-       if (req.body[key] === '') delete req.body[key];
-   }
+
     var flight = new Flight(req.body);
     flight.save(function(err) {
         if (err) return res.render('flights/new');
