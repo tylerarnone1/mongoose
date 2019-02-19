@@ -3,24 +3,28 @@
           <h1>Mongoose flights</h1>
     <h2>flights List</h2>
 
-     
-        <tr>
-            <th>Flightnumber</th>
-            <th>Destination</th>
+    <tr>
             <th>Airline</th>
-            <th>ontime</th>
+            <th>Flight Number</th>
+            <th>Departs</th>
         </tr>
-   
+        <br>
+    </thead>
     <tbody>
-        <% flights.forEach(function(m) { %>
-            <tr>
-                <td><%= m.Flightnumb %></td>
-                <td><%= m.Destination %></td>
-                <td><%= m.Airline%></td>
-                <td><%= m.onTime ? 'Yes' : 'Nope' %></td>
-            </tr>
-        <% }); %>
+      <% flights.forEach(function(f, i) { %>
+          <tr><br>
+              <td><%= f.airline %></td>
+              <td><%= f.flightnumb %></td>
+              <% if (new Date()> f.departs ) {%>
+                  <td style="color:red"><%= f.departs %></td>
+              <% } else { %>
+                  <td><%= f.departs %></td>
+              <% } %>
+             <br> <td><a href="/flights/<%=f._id %>"> details</a></td><br>
+          </tr>
+      <% }); %>
     </tbody>
+       
 </table>
 
 
